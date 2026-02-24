@@ -1,0 +1,131 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S1",
+        "name": "Jebel Ali Corridor",
+        "from": "JEBEL_ALI_PORT",
+        "to": "AL_QUOZ_HUB",
+        "distanceKm": 22,
+        "baseSpeedKph": 65,
+        "truckAccess": "allowed",
+        "maxWeightKg": 50000,
+        "maxHeightM": 5.0,
+        "maxAxleLoadKg": 12000,
+        "corridorPriority": 9,
+        "restrictionType": "none"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[55.08, 24.99], [55.19, 25.13]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S2",
+        "name": "Al Quoz to Ras Al Khor Link",
+        "from": "AL_QUOZ_HUB",
+        "to": "RAS_AL_KHOR",
+        "distanceKm": 12,
+        "baseSpeedKph": 55,
+        "truckAccess": "conditional",
+        "maxWeightKg": 40000,
+        "maxHeightM": 4.6,
+        "maxAxleLoadKg": 10000,
+        "corridorPriority": 6,
+        "restrictionType": "time_window"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[55.19, 25.13], [55.34, 25.18]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S3",
+        "name": "Sheikh Zayed Inner Urban Stretch",
+        "from": "AL_QUOZ_HUB",
+        "to": "DOWNTOWN_DUBAI",
+        "distanceKm": 9,
+        "baseSpeedKph": 45,
+        "truckAccess": "prohibited",
+        "maxWeightKg": 3500,
+        "maxHeightM": 3.6,
+        "maxAxleLoadKg": 3500,
+        "corridorPriority": 1,
+        "restrictionType": "vehicle_type_ban"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[55.19, 25.13], [55.27, 25.20]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S4",
+        "name": "Ras Al Khor to Sharjah Logistics Axis",
+        "from": "RAS_AL_KHOR",
+        "to": "SHARJAH_HUB",
+        "distanceKm": 18,
+        "baseSpeedKph": 70,
+        "truckAccess": "allowed",
+        "maxWeightKg": 52000,
+        "maxHeightM": 5.2,
+        "maxAxleLoadKg": 12000,
+        "corridorPriority": 8,
+        "restrictionType": "none"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[55.34, 25.18], [55.42, 25.31]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S5",
+        "name": "Ras Al Khor Low Bridge Service Road",
+        "from": "RAS_AL_KHOR",
+        "to": "NAD_AL_HAMAR",
+        "distanceKm": 7,
+        "baseSpeedKph": 40,
+        "truckAccess": "conditional",
+        "maxWeightKg": 20000,
+        "maxHeightM": 3.8,
+        "maxAxleLoadKg": 7000,
+        "corridorPriority": 3,
+        "restrictionType": "height_limit"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[55.34, 25.18], [55.38, 25.22]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "S6",
+        "name": "Nad Al Hamar to Sharjah Link",
+        "from": "NAD_AL_HAMAR",
+        "to": "SHARJAH_HUB",
+        "distanceKm": 15,
+        "baseSpeedKph": 55,
+        "truckAccess": "allowed",
+        "maxWeightKg": 30000,
+        "maxHeightM": 4.2,
+        "maxAxleLoadKg": 9000,
+        "corridorPriority": 5,
+        "restrictionType": "none"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[55.38, 25.22], [55.42, 25.31]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TruckAE - UAE Freight Routing</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>TruckAE</h1>
+    <p>Truck-first legal routing for UAE freight operations</p>
+  </header>
+
+  <main>
+    <section class="panel planner">
+      <h2>Route Planner</h2>
+      <form id="routeForm">
+        <label>Origin
+          <select id="originHub" required></select>
+        </label>
+        <label>Destination
+          <select id="destinationHub" required></select>
+        </label>
+        <label>Vehicle Type
+          <select id="vehicleType">
+            <option value="truck">Truck</option>
+            <option value="trailer">Trailer</option>
+            <option value="articulated">Articulated</option>
+          </select>
+        </label>
+        <label>Gross Weight (kg)
+          <input id="weightKg" type="number" value="28000" min="1000" required />
+        </label>
+        <label>Height (m)
+          <input id="heightM" type="number" step="0.1" value="4.2" min="2" required />
+        </label>
+        <label>Axle Load (kg)
+          <input id="axleLoadKg" type="number" value="9000" min="1000" required />
+        </label>
+        <label>Departure Time
+          <input id="departureTime" type="datetime-local" required />
+        </label>
+        <button type="submit">Find Legal Route</button>
+      </form>
+      <div id="routeResult" class="result"></div>
+    </section>
+
+    <section class="panel map-panel">
+      <h2>Interactive Truck Map</h2>
+      <div class="legend">
+        <span class="swatch green"></span> Allowed
+        <span class="swatch yellow"></span> Conditional
+        <span class="swatch red"></span> Prohibited
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <section class="panel alerts">
+      <h2>Compliance Alerts</h2>
+      <ul id="alertsList">
+        <li>No active alerts yet.</li>
+      </ul>
+    </section>
+
+    <section class="panel fleet">
+      <h2>Fleet Dashboard (MVP)</h2>
+      <div class="fleet-grid">
+        <div>
+          <strong>Active Vehicles</strong>
+          <p id="activeVehicles">5</p>
+        </div>
+        <div>
+          <strong>Compliance Status</strong>
+          <p id="complianceStatus">3 compliant / 2 warning</p>
+        </div>
+        <div>
+          <strong>Highest Risk Trip</strong>
+          <p id="riskTrip">TRIP-452 (Time-window risk)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
