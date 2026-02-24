@@ -1,0 +1,39 @@
+{
+  "hubs": [
+    {"id": "JEBEL_ALI_PORT", "name": "Jebel Ali Port", "lat": 24.99, "lng": 55.08, "type": "port"},
+    {"id": "AL_QUOZ_HUB", "name": "Al Quoz Logistics Hub", "lat": 25.13, "lng": 55.19, "type": "industrial"},
+    {"id": "RAS_AL_KHOR", "name": "Ras Al Khor Industrial", "lat": 25.18, "lng": 55.34, "type": "industrial"},
+    {"id": "DOWNTOWN_DUBAI", "name": "Downtown Dubai", "lat": 25.20, "lng": 55.27, "type": "urban"},
+    {"id": "NAD_AL_HAMAR", "name": "Nad Al Hamar", "lat": 25.22, "lng": 55.38, "type": "urban"},
+    {"id": "SHARJAH_HUB", "name": "Sharjah Logistics City", "lat": 25.31, "lng": 55.42, "type": "logistics"}
+  ],
+  "restrictionRules": [
+    {
+      "id": "R1",
+      "segmentId": "S2",
+      "type": "time_window",
+      "severity": "prohibition",
+      "timeWindows": [
+        {"days": [0,1,2,3,4,5,6], "start": "06:00", "end": "09:00"},
+        {"days": [0,1,2,3,4,5,6], "start": "16:00", "end": "20:00"}
+      ],
+      "message": "Heavy trucks restricted during peak windows."
+    },
+    {
+      "id": "R2",
+      "segmentId": "S3",
+      "type": "vehicle_type_ban",
+      "severity": "prohibition",
+      "vehicleTypes": ["truck", "trailer", "articulated"],
+      "message": "Inner urban corridor prohibits freight heavy vehicles."
+    },
+    {
+      "id": "R3",
+      "segmentId": "S5",
+      "type": "height_limit",
+      "severity": "prohibition",
+      "maxHeightM": 3.8,
+      "message": "Low bridge ahead; vehicles above 3.8m cannot pass."
+    }
+  ]
+}

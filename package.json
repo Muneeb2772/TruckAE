@@ -1,0 +1,11 @@
+{
+  "name": "truckae",
+  "version": "1.0.0",
+  "description": "Truck-first UAE routing and compliance MVP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check src/routing.js && node --check public/app.js"
+  }
+}
